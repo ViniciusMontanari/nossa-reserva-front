@@ -1,0 +1,50 @@
+#logo-titulo {
+    display: flex;
+    align-items: center;
+    max-height: 250px;
+}
+
+#logo-titulo h1 {
+    margin-left: 15%;
+}
+
+#logo-titulo img {
+    width: 300px;
+}
+
+@media  (min-width: 300px) and (max-width: 740px){
+
+    #logo-titulo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-height: 250px;
+        margin-top: 20%
+    }
+
+    #logo-titulo img {
+        width: 200px;
+    }
+
+    #logo-titulo h1 {
+        font-size: inherit;
+        text-align: center;
+        margin: 20px 0px 20px 0px;
+    }
+
+    #buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    #buttons .btn {
+        margin: 10px;
+        padding: 10px;
+    }
+
+    #listar-reserva {
+        max-width: 45%;
+    }
+    
+}
