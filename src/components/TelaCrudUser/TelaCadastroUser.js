@@ -6,12 +6,6 @@ import './index.css'
 export default function TelaCadastroUser() {
   return (
     <>
-      <div id="logo-titulo">
-        <img src={Logo} alt="logo" />{" "}
-        {/*Mais pra frente recuperaremos do back-end o logo do condomínio dinamicamente*/}
-        <h1>Nossa Reserva - Condomínio Santa Maria Admin</h1>{" "}
-        {/*Mais pra frente recuperaremos do back-end o nome do condomínio dinamicamente*/}
-      </div>
       <form id="user-form">
         <label>
           Nome do Usuário

@@ -1,17 +1,10 @@
 import React from 'react'
-
-import Logo from "../../assets/nossa-reserva-logo.svg";
-import '../../index.css'
+import './CadastroCondominio.css'
 
 export default function CadCondominio() {
   return (
     <>
-      <div id="logo-titulo">
-        <img src={Logo} alt="logo" />{" "}
-        {/*Mais pra frente recuperaremos do back-end o logo do condomínio dinamicamente*/}
-        <h1>Nossa Reserva - Condomínio Santa Maria Admin</h1>{" "}
-        {/*Mais pra frente recuperaremos do back-end o nome do condomínio dinamicamente*/}
-      </div>
+    <div className='cond-container'>
       <form id="condominio-form">
         <label>
           Nome do condominio
@@ -30,6 +23,7 @@ export default function CadCondominio() {
           Salvar
         </button>
       </div>
+    </div>
     </>
   )
 }
