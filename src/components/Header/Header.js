@@ -5,18 +5,20 @@ import Logo from "../../assets/nossa-reserva-logo.svg";
 import "../../index.css";
 
 export default function Header() {
-    const res = ""
+
    
-    const getPokemon = async () => {
+    async function getPokemon() {
           const url = `https://pokeapi.co/api/v2/pokemon/pikachu`;
           const res = await axios.get(url);
-      };
+          console.log("OEEEEE")
+          console.log(res)
+          console.log("TCHAAAAU")
+    };
     
     getPokemon()
-
-    console.log("OEEEEE")
-    console.log(res)
-    console.log("TCHAAAAU")
+    //console.log("OEEEEE")
+    //console.log(res)
+    //console.log("TCHAAAAU")
 
     return (
     <>
