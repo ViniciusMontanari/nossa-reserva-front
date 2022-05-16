@@ -1,43 +1,31 @@
-import React from "react";
-import axios from "axios";
+import React from 'react';
+import styles from './Header.module.css';
+import { Link } from 'react-router-dom';
+import {ReactComponent as TabSimbol} from '../../Assets/grill.svg'
+import { UserContext } from '../../UserContext';
+import { CondominioContext } from '../../CondominioContext';
 
-import Logo from "../../assets/nossa-reserva-logo.svg";
-import "../../index.css";
+const Header = () => {
+    const { getCondominio, data } = React.useContext(CondominioContext)
+    getCondominio();
+    console.log(data);
 
-export default function Header() {
 
-   
-    async function getPokemon() {
-          const url = `https://pokeapi.co/api/v2/pokemon/pikachu`;
-          const res = await axios.get(url);
-          console.log("OEEEEE")
-          console.log(res)
-          console.log("TCHAAAAU")
-    };
-    
-    getPokemon()
-    //console.log("OEEEEE")
-    //console.log(res)
-    //console.log("TCHAAAAU")
-
-    return (
-    <>
-       <head>
-        <title>Nossa Reserva</title>
-      </head>
-      <body>
-        <header>
-          <div className="logo">
-            <img src={Logo} alt="logo" />
-          </div>
-          <div className="nome-condominio">
-            <h1>Condomínio</h1>
-          </div>
-          <div className="menu"> 
-            Menu
-          </div>
+    return(
+        <header className={styles.header}>
+            <nav className={`${styles.nav} container`}>
+               <Link className={styles.logo} to="/">
+                   <div className={styles.logo}>
+                        <img  src="https://i.pinimg.com/originals/1d/6f/fa/1d6ffaaf726ccb24290fb458a8f08ec0.jpg" /> 
+                    </div>
+               </Link>
+               {data && data['0'].nome }
+               <Link className={styles.login} to="/login">
+                   Login
+               </Link>  
+            </nav>
         </header>
-      </body>
-    </>
-  );
+    )
 }
+
+export default Header
