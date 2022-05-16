@@ -1,13 +1,13 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css'
-import Footer from './Components/Footer/Footer';
-import Header from './Components/Header/Header';
-import Home from './Components/Home/Home';
-import Login from './Components/Login/Login';
+import Footer from './components/Footer/Footer';
+import Header from './components/Header/Header';
+import Home from './components/Home/Home';
+import Login from './components/Login/Login';
 import logo from './logo.svg';
 import { UserStorage } from './UserContext'
 import { CondominioStorage } from './CondominioContext'
-import CadastrarCondominio from './Components/Condominio/CadastrarCondominio';
+import CadastrarCondominio from './components/Condominio/CadastrarCondominio';
 
 
 function App() {
