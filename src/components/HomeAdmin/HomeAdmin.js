@@ -1,12 +1,11 @@
 import React from 'react';
-import { Navigate } from 'react-router-dom';
+import style from './HomeAdmin.module.css';
+import Button from '../Forms/Button';
 import { CONDOMINIO_POST } from '../../Api';
 import CondominioForm from '../../Hooks/CondominioForms';
-import Button from '../Forms/Button';
-import Input from '../Forms/Input';
-import style from './CadastrarCondominio.module.css'
 
-const CadastrarCondominio = () => {
+
+const HomeAdmin = () => {
 
     const condominio = CondominioForm();
     const logotipo = CondominioForm('url');
@@ -35,22 +34,16 @@ const CadastrarCondominio = () => {
         <
         div className = { style.forms } >
         <
-        h1 className = "title" > Cadastrar Condominio < /h1> <
-        form onSubmit = { handleSubmit } >
+        h1 className = "title" > Home Administrador < /h1> <
+        Button className = { style.homeadmin } > Adicionar nome / logo do condomínio < /Button> <
+        Button className = { style.homeadmin } > Adicionar novo usuário < /Button> <
+        Button className = { style.homeadmin } > Adicionar área comum < /Button> <
+        Button className = { style.homeadmin } > Listar Reserva < /Button>
+
         <
-        Input label = "Nome do Condominio"
-        type = "text"
-        name = "condominio" {...condominio }
-        /> <
-        Input label = "Logotipo"
-        type = "text"
-        name = "logotipo" {...logotipo }
-        /> <
-        Button > Cadastrar < /Button> <
-        /form> <
-        /div> <
-        /section>
+        /div> < /
+        section >
     )
 }
 
-export default CadastrarCondominio;
+export default HomeAdmin;

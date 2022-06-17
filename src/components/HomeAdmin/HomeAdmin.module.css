@@ -1,0 +1,36 @@
+.cadastrar {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 100vh;
+    gap: 2rem;
+}
+
+.cadastrar::before {
+    display: block;
+    content: '';
+    background: url('../../Assets/condominio.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+.forms {
+    max-width: 30rem;
+    padding: 2rem;
+}
+
+.button .homeadmin {
+    width: 100%;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 40rem) {
+    .login {
+        grid-template-columns: 1fr;
+    }
+    .login::before {
+        display: none;
+    }
+    .forms {
+        max-width: 100%;
+    }
+}

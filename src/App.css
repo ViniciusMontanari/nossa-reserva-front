@@ -1,5 +1,5 @@
 * {
-    box-sizing:border-box;
+    box-sizing: border-box;
 }
 
 body {
@@ -10,11 +10,16 @@ body {
     font-family: var(--type-first);
 }
 
-h1, h2, h3, h4, p {
+h1,
+h2,
+h3,
+h4,
+p {
     margin: 0px;
 }
 
-ul, li {
+ul,
+li {
     list-style: none;
     padding: 0px;
     margin: 0px;
@@ -30,7 +35,8 @@ img {
     max-width: 100%;
 }
 
-button, input {
+button,
+input {
     display: block;
     font-size: 1rem;
     font-family: var(--type-first);
@@ -41,7 +47,6 @@ button, input {
     max-width: 50rem;
     padding: 0 1rem;
     margin: 0 auto;
-
 }
 
 .title {
@@ -65,7 +70,6 @@ button, input {
     z-index: -1;
 }
 
-
 .animeLeft {
     opacity: 0;
     transform: translateX(-20px);
@@ -77,4 +81,37 @@ button, input {
         opacity: 1;
         transform: initial;
     }
+}
+
+.btn-upload {
+    font-size: 1rem;
+    font-family: var(--type-first);
+    cursor: pointer;
+    border: none;
+    border-radius: 0.4rem;
+    background: #fb1;
+    color: #764701;
+    padding: 0.8rem 1.2rem;
+    box-sizing: 8rem;
+    min-width: none;
+    transition: .1s;
+    float: right;
+    margin-bottom: 5px;
+}
+
+.btn-upload:hover,
+.btn-upload:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px #fea, 0 0 0 4px #fb1;
+}
+
+.btn-upload:disabled {
+    opacity: 0.5rem;
+    cursor: wait;
+}
+
+.container {
+    max-width: 50rem;
+    padding: 0 1rem;
+    margin: 0 auto;
 }
